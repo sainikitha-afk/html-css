@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #5851641c;
+}
+
+/* Centering */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Card styling */
+.card {
+    background: white;
+    width: 300px;
+    border-radius: 10px;
+
+    /* ✅ REQUIRED: Border */
+    border: 1px solid #ddd;
+
+    /* ✅ REQUIRED: Padding */
+    padding-bottom: 15px;
+
+    /* ✅ REQUIRED: Shadow */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    overflow: hidden;
+    text-align: center;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Image */
+.card img {
+    width: 100%;
+}
+
+/* Text */
+.card h2 {
+    margin: 15px 0 10px;
+}
+
+.card p {
+    padding: 0 15px;
+    color: #555;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.card:hover h2 {
+    color: #679abc;
+}
