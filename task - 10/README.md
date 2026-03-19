@@ -13,7 +13,7 @@ Each task is self-contained in its own folder with an `index.html` and `styles.c
 
 | #  | Task | Concepts | Status |
 |----|------|----------|--------|
-| 10 | [Multi-Page Website Simulator](./task-10/) | `:target`, Grid, Flexbox, `@keyframes`, Transitions, Responsive | ✅ Done |
+| 10 | [Multi-Page Website Simulator](./task - 10/) | `:target`, Grid, Flexbox, `@keyframes`, Transitions, Responsive | ✅ Done |
 
 ---
 
@@ -23,11 +23,6 @@ html-css/
 └── task-10/
     ├── index.html
     └── styles.css
-```
-
-## How to View Locally
-
-Just open any `index.html` directly in your browser — no build step, no dependencies, pure HTML & CSS.
 
 ---
 
