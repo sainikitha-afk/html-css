@@ -13,7 +13,8 @@ Each task is self-contained in its own folder with an `index.html` and `styles.c
 
 | #  | Task | Concepts | Status |
 |----|------|----------|--------|
-| 10 | [Multi-Page Website Simulator](./task - 10/) | `:target`, Grid, Flexbox, `@keyframes`, Transitions, Responsive | ✅ Done |
+| 10 | [Multi-Page Website Simulator](./task-10/) | `:target`, Grid, Flexbox, `@keyframes`, Transitions, Responsive | ✅ Done |
+Correct link - Click on this link to view the demo : https://sainikitha-afk.github.io/html-css/task%20-%2010
 
 ---
 
