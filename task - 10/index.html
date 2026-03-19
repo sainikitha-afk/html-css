@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FRONTEND.DEV — Learn HTML, CSS & Layout</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=Fraunces:ital,wght@0,300;1,600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- CSS-only nav toggle -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle"/>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Primary navigation">
+    <a href="#home" class="logo" aria-label="Frontend.dev home">
+      <span class="logo-bracket">&lt;</span>frontend<span class="logo-dot">.</span>dev<span class="logo-bracket">/&gt;</span>
+    </a>
+
+    <label for="nav-toggle" class="hamburger" aria-label="Toggle menu" tabindex="0">
+      <span></span><span></span><span></span>
+    </label>
+
+    <ul class="nav-links">
+      <li><a href="#home"       class="nav-link">Home</a></li>
+      <li><a href="#html"       class="nav-link">HTML</a></li>
+      <li><a href="#css"        class="nav-link">CSS</a></li>
+      <li><a href="#layout"     class="nav-link">Layout</a></li>
+      <li><a href="#components" class="nav-link">Components</a></li>
+      <li><a href="#tasks"      class="nav-link">Tasks</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGES -->
+  <main class="pages-wrapper">
+
+    <!-- ░░ HOME ░░ -->
+    <section id="home" class="page page--home">
+      <div class="home-grid">
+        <div class="home-text">
+          <div class="terminal-tag">// your frontend internship starts here</div>
+          <h1 class="home-title">Master<br/><em>Frontend</em><br/>From Zero.</h1>
+          <p class="home-sub">HTML semantics, CSS properties, Flexbox, Grid, animations, pseudo-classes — everything you need, one reference at a time.</p>
+          <div class="home-cta-row">
+            <a href="#html" class="btn btn--primary">Start Learning →</a>
+            <a href="#tasks" class="btn btn--ghost">View All Tasks</a>
+          </div>
+        </div>
+
+        <div class="home-visual">
+          <div class="code-window">
+            <div class="code-bar">
+              <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+              <span class="code-filename">index.html</span>
+            </div>
+            <pre class="code-block"><code><span class="c-tag">&lt;!DOCTYPE</span> <span class="c-attr">html</span><span class="c-tag">&gt;</span>
+<span class="c-tag">&lt;html</span> <span class="c-attr">lang</span>=<span class="c-val">"en"</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;head&gt;</span>
+    <span class="c-tag">&lt;title&gt;</span><span class="c-text">My Portfolio</span><span class="c-tag">&lt;/title&gt;</span>
+    <span class="c-tag">&lt;link</span> <span class="c-attr">rel</span>=<span class="c-val">"stylesheet"</span>
+          <span class="c-attr">href</span>=<span class="c-val">"styles.css"</span><span class="c-tag">/&gt;</span>
+  <span class="c-tag">&lt;/head&gt;</span>
+  <span class="c-tag">&lt;body&gt;</span>
+    <span class="c-tag">&lt;header&gt;</span>
+      <span class="c-tag">&lt;nav&gt;</span><span class="c-comment"><!-- navigation --></span><span class="c-tag">&lt;/nav&gt;</span>
+    <span class="c-tag">&lt;/header&gt;</span>
+    <span class="c-tag">&lt;main&gt;</span>
+      <span class="c-comment"><!-- your content --></span>
+    <span class="c-tag">&lt;/main&gt;</span>
+    <span class="c-tag">&lt;footer&gt;</span><span class="c-tag">&lt;/footer&gt;</span>
+  <span class="c-tag">&lt;/body&gt;</span>
+<span class="c-tag">&lt;/html&gt;</span></code></pre>
+          </div>
+          <div class="badge-float badge--a">HTML5</div>
+          <div class="badge-float badge--b">CSS3</div>
+          <div class="badge-float badge--c">Grid</div>
+          <div class="badge-float badge--d">Flex</div>
+        </div>
+      </div>
+
+      <div class="track-strip">
+        <div class="track-inner">
+          <span>HTML · CSS · Flexbox · Grid · Animations · Pseudo-classes · Transitions · Media Queries · Selectors · Box Model · </span>
+          <span>HTML · CSS · Flexbox · Grid · Animations · Pseudo-classes · Transitions · Media Queries · Selectors · Box Model · </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ HTML ░░ -->
+    <section id="html" class="page page--html">
+      <div class="learn-layout">
+        <aside class="learn-sidebar">
+          <span class="section-tag">// 01 · HTML</span>
+          <h2 class="section-title">Semantic<br/>HTML.</h2>
+          <p class="sidebar-sub">Structure your content with meaning. Search engines and screen readers both thank you.</p>
+          <div class="progress-ring" aria-label="HTML mastery level">
+            <svg viewBox="0 0 80 80"><circle class="ring-bg" cx="40" cy="40" r="32"/><circle class="ring-fill ring-html" cx="40" cy="40" r="32"/></svg>
+            <span class="ring-label">HTML</span>
+          </div>
+        </aside>
+
+        <div class="learn-content">
+          <div class="concept-grid">
+
+            <div class="concept-card">
+              <span class="concept-tag">Structure</span>
+              <h3 class="concept-name">Semantic Elements</h3>
+              <div class="code-snippet">
+<pre><code><span class="c-tag">&lt;header&gt;</span>  <span class="c-comment"><!-- site header --></span>
+<span class="c-tag">&lt;nav&gt;</span>     <span class="c-comment"><!-- navigation --></span>
+<span class="c-tag">&lt;main&gt;</span>    <span class="c-comment"><!-- primary content --></span>
+<span class="c-tag">&lt;article&gt;</span> <span class="c-comment"><!-- standalone piece --></span>
+<span class="c-tag">&lt;section&gt;</span> <span class="c-comment"><!-- thematic group --></span>
+<span class="c-tag">&lt;aside&gt;</span>   <span class="c-comment"><!-- sidebar content --></span>
+<span class="c-tag">&lt;footer&gt;</span>  <span class="c-comment"><!-- site footer --></span></code></pre>
+              </div>
+              <p class="concept-desc">Semantic tags tell the browser <em>what</em> your content is, not just how it looks. Always prefer them over generic <code>&lt;div&gt;</code>s.</p>
+            </div>
+
+            <div class="concept-card">
+              <span class="concept-tag">Forms</span>
+              <h3 class="concept-name">Input Elements</h3>
+              <div class="code-snippet">
+<pre><code><span class="c-tag">&lt;form</span> <span class="c-attr">action</span>=<span class="c-val">"/submit"</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;label</span> <span class="c-attr">for</span>=<span class="c-val">"name"</span><span class="c-tag">&gt;</span>Name<span class="c-tag">&lt;/label&gt;</span>
+  <span class="c-tag">&lt;input</span> <span class="c-attr">type</span>=<span class="c-val">"text"</span>
+         <span class="c-attr">id</span>=<span class="c-val">"name"</span>
+         <span class="c-attr">required</span><span class="c-tag">/&gt;</span>
+  <span class="c-tag">&lt;button</span> <span class="c-attr">type</span>=<span class="c-val">"submit"</span><span class="c-tag">&gt;</span>
+    Submit
+  <span class="c-tag">&lt;/button&gt;</span>
+<span class="c-tag">&lt;/form&gt;</span></code></pre>
+              </div>
+              <p class="concept-desc">Always pair <code>&lt;label&gt;</code> with its input using matching <code>for</code> / <code>id</code> for full accessibility.</p>
+            </div>
+
+            <div class="concept-card concept-card--wide">
+              <span class="concept-tag">Meta & Head</span>
+              <h3 class="concept-name">Document Head</h3>
+              <div class="code-snippet">
+<pre><code><span class="c-tag">&lt;head&gt;</span>
+  <span class="c-tag">&lt;meta</span> <span class="c-attr">charset</span>=<span class="c-val">"UTF-8"</span><span class="c-tag">/&gt;</span>
+  <span class="c-tag">&lt;meta</span> <span class="c-attr">name</span>=<span class="c-val">"viewport"</span> <span class="c-attr">content</span>=<span class="c-val">"width=device-width, initial-scale=1.0"</span><span class="c-tag">/&gt;</span>
+  <span class="c-tag">&lt;meta</span> <span class="c-attr">name</span>=<span class="c-val">"description"</span> <span class="c-attr">content</span>=<span class="c-val">"Page description for SEO"</span><span class="c-tag">/&gt;</span>
+  <span class="c-tag">&lt;title&gt;</span><span class="c-text">Page Title</span><span class="c-tag">&lt;/title&gt;</span>
+  <span class="c-tag">&lt;link</span> <span class="c-attr">rel</span>=<span class="c-val">"stylesheet"</span> <span class="c-attr">href</span>=<span class="c-val">"styles.css"</span><span class="c-tag">/&gt;</span>
+<span class="c-tag">&lt;/head&gt;</span></code></pre>
+              </div>
+              <p class="concept-desc">The viewport meta tag is the single most important line for responsive design. Never skip it.</p>
+            </div>
+
+            <div class="concept-card">
+              <span class="concept-tag">Media</span>
+              <h3 class="concept-name">Images & Links</h3>
+              <div class="code-snippet">
+<pre><code><span class="c-tag">&lt;img</span>
+  <span class="c-attr">src</span>=<span class="c-val">"photo.jpg"</span>
+  <span class="c-attr">alt</span>=<span class="c-val">"Descriptive text"</span>
+  <span class="c-attr">loading</span>=<span class="c-val">"lazy"</span>
+  <span class="c-attr">width</span>=<span class="c-val">"800"</span>
+  <span class="c-attr">height</span>=<span class="c-val">"600"</span>
+<span class="c-tag">/&gt;</span>
+
+<span class="c-tag">&lt;a</span> <span class="c-attr">href</span>=<span class="c-val">"https://..."</span>
+   <span class="c-attr">target</span>=<span class="c-val">"_blank"</span>
+   <span class="c-attr">rel</span>=<span class="c-val">"noopener"</span><span class="c-tag">&gt;</span>
+  Link text
+<span class="c-tag">&lt;/a&gt;</span></code></pre>
+              </div>
+              <p class="concept-desc"><code>alt</code> text is mandatory. <code>loading="lazy"</code> defers off-screen images for performance.</p>
+            </div>
+
+            <div class="concept-card">
+              <span class="concept-tag">Lists</span>
+              <h3 class="concept-name">List Types</h3>
+              <div class="code-snippet">
+<pre><code><span class="c-comment">/* Unordered */</span>
+<span class="c-tag">&lt;ul&gt;</span>
+  <span class="c-tag">&lt;li&gt;</span>Item one<span class="c-tag">&lt;/li&gt;</span>
+  <span class="c-tag">&lt;li&gt;</span>Item two<span class="c-tag">&lt;/li&gt;</span>
+<span class="c-tag">&lt;/ul&gt;</span>
+
+<span class="c-comment">/* Ordered */</span>
+<span class="c-tag">&lt;ol</span> <span class="c-attr">type</span>=<span class="c-val">"A"</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;li&gt;</span>First<span class="c-tag">&lt;/li&gt;</span>
+  <span class="c-tag">&lt;li&gt;</span>Second<span class="c-tag">&lt;/li&gt;</span>
+<span class="c-tag">&lt;/ol&gt;</span></code></pre>
+              </div>
+              <p class="concept-desc">Use <code>&lt;ul&gt;</code> for unordered nav items, <code>&lt;ol&gt;</code> for steps or rankings.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ CSS ░░ -->
+    <section id="css" class="page page--css">
+      <div class="learn-layout">
+        <aside class="learn-sidebar">
+          <span class="section-tag">// 02 · CSS</span>
+          <h2 class="section-title">Styling &amp;<br/>Selectors.</h2>
+          <p class="sidebar-sub">Box model, cascade, specificity, custom properties — the rules that govern every pixel.</p>
+          <div class="progress-ring">
+            <svg viewBox="0 0 80 80"><circle class="ring-bg" cx="40" cy="40" r="32"/><circle class="ring-fill ring-css" cx="40" cy="40" r="32"/></svg>
+            <span class="ring-label">CSS</span>
+          </div>
+        </aside>
+
+        <div class="learn-content">
+          <div class="concept-grid">
+
+            <div class="concept-card">
+              <span class="concept-tag">Foundation</span>
+              <h3 class="concept-name">Box Model</h3>
+              <div class="box-model-visual">
+                <div class="bm-margin">margin
+                  <div class="bm-border">border
+                    <div class="bm-padding">padding
+                      <div class="bm-content">content</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="code-snippet">
+<pre><code><span class="c-prop">box-sizing</span>: <span class="c-val">border-box</span>;
+<span class="c-prop">width</span>: <span class="c-val">300px</span>;
+<span class="c-prop">padding</span>: <span class="c-val">1rem</span>;
+<span class="c-prop">border</span>: <span class="c-val">2px solid #333</span>;
+<span class="c-prop">margin</span>: <span class="c-val">0 auto</span>;</code></pre>
+              </div>
+            </div>
+
+            <div class="concept-card">
+              <span class="concept-tag">Variables</span>
+              <h3 class="concept-name">Custom Properties</h3>
+              <div class="code-snippet">
+<pre><code><span class="c-selector">:root</span> {
+  <span class="c-prop">--color-primary</span>: <span class="c-val">#ff6b35</span>;
+  <span class="c-prop">--font-size-lg</span>: <span class="c-val">1.25rem</span>;
+  <span class="c-prop">--spacing-md</span>: <span class="c-val">1.5rem</span>;
+  <span class="c-prop">--radius</span>: <span class="c-val">8px</span>;
+}
+
+<span class="c-selector">.button</span> {
+  <span class="c-prop">background</span>: <span class="c-val">var(--color-primary)</span>;
+  <span class="c-prop">padding</span>: <span class="c-val">var(--spacing-md)</span>;
+  <span class="c-prop">border-radius</span>: <span class="c-val">var(--radius)</span>;
+}</code></pre>
+              </div>
+              <p class="concept-desc">Define once in <code>:root</code>, reuse everywhere. Changing a theme is one line.</p>
+            </div>
+
+            <div class="concept-card">
+              <span class="concept-tag">Pseudo-classes</span>
+              <h3 class="concept-name">State Selectors</h3>
+              <div class="code-snippet">
+<pre><code><span class="c-selector">a:hover</span>     { <span class="c-prop">color</span>: <span class="c-val">red</span>; }
+<span class="c-selector">a:focus</span>     { <span class="c-prop">outline</span>: <span class="c-val">2px solid blue</span>; }
+<span class="c-selector">a:visited</span>   { <span class="c-prop">color</span>: <span class="c-val">purple</span>; }
+<span class="c-selector">input:checked</span>{ <span class="c-prop">accent-color</span>: <span class="c-val">lime</span>; }
+<span class="c-selector">p:first-child</span>{ <span class="c-prop">font-weight</span>: <span class="c-val">bold</span>; }
+<span class="c-selector">li:nth-child(2n)</span> {
+  <span class="c-prop">background</span>: <span class="c-val">#f5f5f5</span>;
+}
+<span class="c-selector">section:target</span> {
+  <span class="c-prop">opacity</span>: <span class="c-val">1</span>;
+}</code></pre>
+              </div>
+            </div>
+
+            <div class="concept-card">
+              <span class="concept-tag">Transitions</span>
+              <h3 class="concept-name">Smooth Changes</h3>
+              <div class="code-snippet">
+<pre><code><span class="c-selector">.card</span> {
+  <span class="c-prop">transition</span>:
+    <span class="c-val">transform 0.3s ease</span>,
+    <span class="c-val">box-shadow 0.3s ease</span>,
+    <span class="c-val">opacity 0.2s linear</span>;
+}
+
+<span class="c-selector">.card:hover</span> {
+  <span class="c-prop">transform</span>: <span class="c-val">translateY(-8px)</span>;
+  <span class="c-prop">box-shadow</span>: <span class="c-val">0 20px 40px
+    rgba(0,0,0,0.15)</span>;
+}</code></pre>
+              </div>
+              <p class="concept-desc">Always transition only <code>transform</code> and <code>opacity</code> — they're GPU accelerated.</p>
+            </div>
+
+            <div class="concept-card concept-card--wide">
+              <span class="concept-tag">Animations</span>
+              <h3 class="concept-name">@keyframes</h3>
+              <div class="code-snippet">
+<pre><code><span class="c-selector">@keyframes</span> <span class="c-val">fadeSlideUp</span> {
+  <span class="c-selector">from</span> {
+    <span class="c-prop">opacity</span>: <span class="c-val">0</span>;
+    <span class="c-prop">transform</span>: <span class="c-val">translateY(30px)</span>;
+  }
+  <span class="c-selector">to</span> {
+    <span class="c-prop">opacity</span>: <span class="c-val">1</span>;
+    <span class="c-prop">transform</span>: <span class="c-val">translateY(0)</span>;
+  }
+}
+
+<span class="c-selector">.hero-text</span> {
+  <span class="c-prop">animation</span>: <span class="c-val">fadeSlideUp 0.8s ease 0.2s both</span>;
+}   <span class="c-comment">/* name | duration | easing | delay | fill-mode */</span></code></pre>
+              </div>
+              <p class="concept-desc"><code>both</code> as fill-mode applies the <code>from</code> state before playback and the <code>to</code> state after — prevents flicker.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ LAYOUT ░░ -->
+    <section id="layout" class="page page--layout">
+      <div class="learn-layout">
+        <aside class="learn-sidebar">
+          <span class="section-tag">// 03 · Layout</span>
+          <h2 class="section-title">Flexbox<br/>&amp; Grid.</h2>
+          <p class="sidebar-sub">Two layout systems. Grid for the macro, Flex for the micro. Learn both cold.</p>
+          <div class="progress-ring">
+            <svg viewBox="0 0 80 80"><circle class="ring-bg" cx="40" cy="40" r="32"/><circle class="ring-fill ring-layout" cx="40" cy="40" r="32"/></svg>
+            <span class="ring-label">Layout</span>
+          </div>
+        </aside>
+
+        <div class="learn-content">
+          <div class="concept-grid">
+
+            <div class="concept-card concept-card--wide">
+              <span class="concept-tag">Flexbox</span>
+              <h3 class="concept-name">Flex Container</h3>
+              <div class="flex-demo-visual">
+                <div class="fd-container">
+                  <div class="fd-item">1</div>
+                  <div class="fd-item fd-item--grow">2 (grow)</div>
+                  <div class="fd-item">3</div>
+                </div>
+              </div>
+              <div class="code-snippet">
+<pre><code><span class="c-selector">.container</span> {
+  <span class="c-prop">display</span>: <span class="c-val">flex</span>;
+  <span class="c-prop">flex-direction</span>: <span class="c-val">row</span>;      <span class="c-comment">/* row | column */</span>
+  <span class="c-prop">justify-content</span>: <span class="c-val">space-between</span>; <span class="c-comment">/* main axis */</span>
+  <span class="c-prop">align-items</span>: <span class="c-val">center</span>;     <span class="c-comment">/* cross axis */</span>
+  <span class="c-prop">flex-wrap</span>: <span class="c-val">wrap</span>;
+  <span class="c-prop">gap</span>: <span class="c-val">1rem</span>;
+}
+<span class="c-selector">.item</span> {
+  <span class="c-prop">flex</span>: <span class="c-val">1 1 200px</span>; <span class="c-comment">/* grow shrink basis */</span>
+}</code></pre>
+              </div>
+            </div>
+
+            <div class="concept-card concept-card--wide">
+              <span class="concept-tag">CSS Grid</span>
+              <h3 class="concept-name">Grid Container</h3>
+              <div class="grid-demo-visual">
+                <div class="gd-container">
+                  <div class="gd-item gd-item--span">Header</div>
+                  <div class="gd-item">Sidebar</div>
+                  <div class="gd-item gd-item--main">Main</div>
+                  <div class="gd-item gd-item--footer">Footer</div>
+                </div>
+              </div>
+              <div class="code-snippet">
+<pre><code><span class="c-selector">.grid</span> {
+  <span class="c-prop">display</span>: <span class="c-val">grid</span>;
+  <span class="c-prop">grid-template-columns</span>: <span class="c-val">200px 1fr</span>;
+  <span class="c-prop">grid-template-rows</span>: <span class="c-val">auto 1fr auto</span>;
+  <span class="c-prop">gap</span>: <span class="c-val">1rem</span>;
+}
+<span class="c-selector">.header</span> { <span class="c-prop">grid-column</span>: <span class="c-val">1 / -1</span>; }
+<span class="c-selector">.footer</span> { <span class="c-prop">grid-column</span>: <span class="c-val">1 / -1</span>; }
+
+<span class="c-comment">/* Responsive shorthand */</span>
+<span class="c-prop">grid-template-columns</span>:
+  <span class="c-val">repeat(auto-fit, minmax(280px, 1fr))</span>;</code></pre>
+              </div>
+            </div>
+
+            <div class="concept-card">
+              <span class="concept-tag">Responsive</span>
+              <h3 class="concept-name">Media Queries</h3>
+              <div class="code-snippet">
+<pre><code><span class="c-comment">/* Mobile first approach */</span>
+<span class="c-selector">.grid</span> {
+  <span class="c-prop">grid-template-columns</span>: <span class="c-val">1fr</span>;
+}
+
+<span class="c-selector">@media (min-width: 768px)</span> {
+  <span class="c-selector">.grid</span> {
+    <span class="c-prop">grid-template-columns</span>:
+      <span class="c-val">repeat(2, 1fr)</span>;
+  }
+}
+
+<span class="c-selector">@media (min-width: 1024px)</span> {
+  <span class="c-selector">.grid</span> {
+    <span class="c-prop">grid-template-columns</span>:
+      <span class="c-val">repeat(3, 1fr)</span>;
+  }
+}</code></pre>
+              </div>
+            </div>
+
+            <div class="concept-card">
+              <span class="concept-tag">Modern CSS</span>
+              <h3 class="concept-name">clamp() & fluid type</h3>
+              <div class="code-snippet">
+<pre><code><span class="c-comment">/* clamp(min, preferred, max) */</span>
+<span class="c-selector">h1</span> {
+  <span class="c-prop">font-size</span>: <span class="c-val">clamp(2rem, 5vw, 5rem)</span>;
+}
+<span class="c-selector">.container</span> {
+  <span class="c-prop">padding</span>:
+    <span class="c-val">clamp(1rem, 3vw, 3rem)</span>;
+  <span class="c-prop">max-width</span>: <span class="c-val">min(90%, 1200px)</span>;
+  <span class="c-prop">margin</span>: <span class="c-val">0 auto</span>;
+}
+<span class="c-comment">/* No media query needed! */</span></code></pre>
+              </div>
+              <p class="concept-desc"><code>clamp()</code> replaces dozens of media query breakpoints with fluid scaling.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ COMPONENTS ░░ -->
+    <section id="components" class="page page--components">
+      <div class="learn-layout">
+        <aside class="learn-sidebar">
+          <span class="section-tag">// 04 · Components</span>
+          <h2 class="section-title">CSS<br/>Patterns.</h2>
+          <p class="sidebar-sub">Cards, modals, dropdowns, accordions — reusable patterns built purely in CSS.</p>
+          <div class="progress-ring">
+            <svg viewBox="0 0 80 80"><circle class="ring-bg" cx="40" cy="40" r="32"/><circle class="ring-fill ring-comp" cx="40" cy="40" r="32"/></svg>
+            <span class="ring-label">Components</span>
+          </div>
+        </aside>
+
+        <div class="learn-content">
+          <div class="concept-grid">
+
+            <div class="concept-card">
+              <span class="concept-tag">Pattern</span>
+              <h3 class="concept-name">Card with Hover</h3>
+              <div class="demo-card">
+                <div class="demo-card-img"></div>
+                <div class="demo-card-body">
+                  <strong>Card Title</strong>
+                  <p>Hover me to see the effect.</p>
+                </div>
+              </div>
+              <div class="code-snippet">
+<pre><code><span class="c-selector">.card</span> {
+  <span class="c-prop">border-radius</span>: <span class="c-val">12px</span>;
+  <span class="c-prop">overflow</span>: <span class="c-val">hidden</span>;
+  <span class="c-prop">box-shadow</span>: <span class="c-val">0 4px 20px
+    rgba(0,0,0,0.08)</span>;
+  <span class="c-prop">transition</span>: <span class="c-val">transform .3s,
+    box-shadow .3s</span>;
+}
+<span class="c-selector">.card:hover</span> {
+  <span class="c-prop">transform</span>: <span class="c-val">translateY(-6px)</span>;
+  <span class="c-prop">box-shadow</span>: <span class="c-val">0 16px 40px
+    rgba(0,0,0,0.15)</span>;
+}</code></pre>
+              </div>
+            </div>
+
+            <div class="concept-card">
+              <span class="concept-tag">Pattern</span>
+              <h3 class="concept-name">:target Modal</h3>
+              <div class="code-snippet">
+<pre><code><span class="c-comment">/* HTML */</span>
+<span class="c-tag">&lt;a</span> <span class="c-attr">href</span>=<span class="c-val">"#modal"</span><span class="c-tag">&gt;</span>Open<span class="c-tag">&lt;/a&gt;</span>
+<span class="c-tag">&lt;div</span> <span class="c-attr">id</span>=<span class="c-val">"modal"</span> <span class="c-attr">class</span>=<span class="c-val">"modal"</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;a</span> <span class="c-attr">href</span>=<span class="c-val">"#"</span> <span class="c-attr">class</span>=<span class="c-val">"close"</span><span class="c-tag">&gt;</span>✕<span class="c-tag">&lt;/a&gt;</span>
+<span class="c-tag">&lt;/div&gt;</span>
+
+<span class="c-comment">/* CSS */</span>
+<span class="c-selector">.modal</span> {
+  <span class="c-prop">opacity</span>: <span class="c-val">0</span>;
+  <span class="c-prop">pointer-events</span>: <span class="c-val">none</span>;
+  <span class="c-prop">transition</span>: <span class="c-val">opacity .3s</span>;
+}
+<span class="c-selector">.modal:target</span> {
+  <span class="c-prop">opacity</span>: <span class="c-val">1</span>;
+  <span class="c-prop">pointer-events</span>: <span class="c-val">all</span>;
+}</code></pre>
+              </div>
+              <p class="concept-desc">Zero JavaScript. Pure CSS modal using URL hash and <code>:target</code>.</p>
+            </div>
+
+            <div class="concept-card">
+              <span class="concept-tag">Pattern</span>
+              <h3 class="concept-name">Checkbox Accordion</h3>
+              <div class="mini-accordion">
+                <div class="acc-item">
+                  <input type="checkbox" id="acc1" class="acc-toggle"/>
+                  <label for="acc1" class="acc-label">What is the box model? <span>+</span></label>
+                  <div class="acc-body">Content + Padding + Border + Margin. Always use <code>box-sizing: border-box</code>.</div>
+                </div>
+                <div class="acc-item">
+                  <input type="checkbox" id="acc2" class="acc-toggle"/>
+                  <label for="acc2" class="acc-label">Flex vs Grid? <span>+</span></label>
+                  <div class="acc-body">Grid = 2D layout. Flex = 1D (row or column). Use both together.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="concept-card concept-card--wide">
+              <span class="concept-tag">Pattern</span>
+              <h3 class="concept-name">Dropdown Menu</h3>
+              <div class="code-snippet">
+<pre><code><span class="c-selector">.dropdown</span> { <span class="c-prop">position</span>: <span class="c-val">relative</span>; }
+
+<span class="c-selector">.dropdown-menu</span> {
+  <span class="c-prop">position</span>: <span class="c-val">absolute</span>;
+  <span class="c-prop">top</span>: <span class="c-val">100%</span>;
+  <span class="c-prop">opacity</span>: <span class="c-val">0</span>;
+  <span class="c-prop">visibility</span>: <span class="c-val">hidden</span>;
+  <span class="c-prop">transform</span>: <span class="c-val">translateY(-8px)</span>;
+  <span class="c-prop">transition</span>: <span class="c-val">opacity .25s, transform .25s,
+    visibility .25s</span>;
+}
+
+<span class="c-selector">.dropdown:hover .dropdown-menu</span>,
+<span class="c-selector">.dropdown:focus-within .dropdown-menu</span> {
+  <span class="c-prop">opacity</span>: <span class="c-val">1</span>;
+  <span class="c-prop">visibility</span>: <span class="c-val">visible</span>;
+  <span class="c-prop">transform</span>: <span class="c-val">translateY(0)</span>;
+}</code></pre>
+              </div>
+              <p class="concept-desc"><code>:focus-within</code> makes keyboard navigation work — the dropdown stays open when focus is inside it.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ TASKS ░░ -->
+    <section id="tasks" class="page page--tasks">
+      <div class="tasks-header">
+        <span class="section-tag">// 05 · Assignment</span>
+        <h2 class="section-title">Your 10<br/>Tasks.</h2>
+        <p class="tasks-sub">The full internship frontend assignment — each task mapped to the concepts you just learned.</p>
+      </div>
+
+      <div class="tasks-grid">
+        <div class="task-card">
+          <span class="task-num">01</span>
+          <div class="task-body">
+            <h3 class="task-name">Static Webpage Layout</h3>
+            <p class="task-desc">Semantic HTML, typography, spacing, simple media query responsive design.</p>
+            <div class="task-tags">
+              <span class="ttag">HTML</span><span class="ttag">CSS</span><span class="ttag">Media Queries</span>
+            </div>
+          </div>
+          <span class="task-diff diff--easy">Beginner</span>
+        </div>
+
+        <div class="task-card">
+          <span class="task-num">02</span>
+          <div class="task-body">
+            <h3 class="task-name">CSS Card Component</h3>
+            <p class="task-desc">Card with image, title, description — hover effects with smooth transitions.</p>
+            <div class="task-tags">
+              <span class="ttag">CSS</span><span class="ttag">Transitions</span><span class="ttag">:hover</span>
+            </div>
+          </div>
+          <span class="task-diff diff--easy">Beginner</span>
+        </div>
+
+        <div class="task-card">
+          <span class="task-num">03</span>
+          <div class="task-body">
+            <h3 class="task-name">Responsive Grid Layout</h3>
+            <p class="task-desc">3-column desktop grid collapsing to 1 column on mobile via media queries.</p>
+            <div class="task-tags">
+              <span class="ttag">CSS Grid</span><span class="ttag">Responsive</span>
+            </div>
+          </div>
+          <span class="task-diff diff--easy">Beginner</span>
+        </div>
+
+        <div class="task-card">
+          <span class="task-num">04</span>
+          <div class="task-body">
+            <h3 class="task-name">Pure CSS Dropdown Menu</h3>
+            <p class="task-desc">Nav bar with hover-triggered submenu using nested <code>&lt;ul&gt;</code> and transitions.</p>
+            <div class="task-tags">
+              <span class="ttag">:hover</span><span class="ttag">Flexbox</span><span class="ttag">Transitions</span>
+            </div>
+          </div>
+          <span class="task-diff diff--mid">Intermediate</span>
+        </div>
+
+        <div class="task-card">
+          <span class="task-num">05</span>
+          <div class="task-body">
+            <h3 class="task-name">Modal Popup — No JS</h3>
+            <p class="task-desc">Centered modal with overlay using <code>:target</code> or checkbox hack.</p>
+            <div class="task-tags">
+              <span class="ttag">:target</span><span class="ttag">:checked</span><span class="ttag">Overlay</span>
+            </div>
+          </div>
+          <span class="task-diff diff--mid">Intermediate</span>
+        </div>
+
+        <div class="task-card">
+          <span class="task-num">06</span>
+          <div class="task-body">
+            <h3 class="task-name">Tabbed Content Interface</h3>
+            <p class="task-desc">Radio buttons + labels as tabs, <code>:checked</code> sibling combinator reveals content.</p>
+            <div class="task-tags">
+              <span class="ttag">:checked</span><span class="ttag">Radio</span><span class="ttag">Sibling ~</span>
+            </div>
+          </div>
+          <span class="task-diff diff--mid">Intermediate</span>
+        </div>
+
+        <div class="task-card">
+          <span class="task-num">07</span>
+          <div class="task-body">
+            <h3 class="task-name">Pure CSS Carousel</h3>
+            <p class="task-desc">Auto-sliding carousel via <code>@keyframes</code>, manual via <code>:checked</code> radio buttons.</p>
+            <div class="task-tags">
+              <span class="ttag">@keyframes</span><span class="ttag">:checked</span><span class="ttag">:target</span>
+            </div>
+          </div>
+          <span class="task-diff diff--hard">Advanced</span>
+        </div>
+
+        <div class="task-card">
+          <span class="task-num">08</span>
+          <div class="task-body">
+            <h3 class="task-name">CSS Accordion</h3>
+            <p class="task-desc">Expand/collapse content sections using checkbox hack + max-height transition.</p>
+            <div class="task-tags">
+              <span class="ttag">:checked</span><span class="ttag">max-height</span><span class="ttag">Transitions</span>
+            </div>
+          </div>
+          <span class="task-diff diff--mid">Intermediate</span>
+        </div>
+
+        <div class="task-card">
+          <span class="task-num">09</span>
+          <div class="task-body">
+            <h3 class="task-name">Complex Grid + Flex Layout</h3>
+            <p class="task-desc">Grid macro layout + Flexbox micro, overlapping z-index elements, sticky header.</p>
+            <div class="task-tags">
+              <span class="ttag">Grid</span><span class="ttag">Flexbox</span><span class="ttag">position sticky</span>
+            </div>
+          </div>
+          <span class="task-diff diff--hard">Advanced</span>
+        </div>
+
+        <div class="task-card task-card--featured">
+          <span class="task-num">10</span>
+          <div class="task-body">
+            <h3 class="task-name">Multi-Page Simulator — No JS</h3>
+            <p class="task-desc">Full multi-section website, page transitions, accessible nav, fully responsive. <em>You're looking at it.</em></p>
+            <div class="task-tags">
+              <span class="ttag">:target</span><span class="ttag">Grid</span><span class="ttag">Flex</span><span class="ttag">@keyframes</span><span class="ttag">Responsive</span>
+            </div>
+          </div>
+          <span class="task-diff diff--done">✓ Done</span>
+        </div>
+      </div>
+
+      <footer class="site-footer">
+        <span class="footer-brand"><span class="logo-bracket">&lt;</span>frontend<span class="logo-dot">.</span>dev<span class="logo-bracket">/&gt;</span></span>
+        <span>Built with HTML &amp; CSS only. Zero JavaScript.</span>
+        <span>© 2025 · Internship Assignment</span>
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- Side page dots -->
+  <nav class="page-dots" aria-label="Page navigation">
+    <a href="#home"       class="dot" aria-label="Home"></a>
+    <a href="#html"       class="dot" aria-label="HTML"></a>
+    <a href="#css"        class="dot" aria-label="CSS"></a>
+    <a href="#layout"     class="dot" aria-label="Layout"></a>
+    <a href="#components" class="dot" aria-label="Components"></a>
+    <a href="#tasks"      class="dot" aria-label="Tasks"></a>
+  </nav>
+
+</body>
+</html>

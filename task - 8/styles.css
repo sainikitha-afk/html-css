@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8 - Accordion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>CSS Accordion</h1>
+
+    <div class="accordion">
+
+        <div class="item">
+            <input type="checkbox" id="item1">
+            <label for="item1">HTML Basics</label>
+            <div class="content">
+                <p>HTML structures web pages using semantic elements.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <input type="checkbox" id="item2">
+            <label for="item2">CSS Styling</label>
+            <div class="content">
+                <p>CSS styles layouts using colors, spacing, and positioning.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <input type="checkbox" id="item3">
+            <label for="item3">Responsive Design</label>
+            <div class="content">
+                <p>Media queries help adapt layouts for different devices.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    padding: 50px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+/* Accordion container */
+.accordion {
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Hide checkboxes */
+.accordion input {
+    display: none;
+}
+
+/* Labels (headers) */
+.accordion label {
+    display: block;
+    background: #3498db;
+    color: white;
+    padding: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    text-align: left;
+    transition: background 0.3s;
+}
+
+.accordion label:hover {
+    background: #2980b9;
+}
+
+/* Content */
+.content {
+    max-height: 0;
+    overflow: hidden;
+    background: white;
+    text-align: left;
+    padding: 0 15px;
+    border-radius: 0 0 6px 6px;
+
+    transition: max-height 0.4s ease;
+}
+
+/* Show content */
+.accordion input:checked + label + .content {
+    max-height: 100px;
+    padding: 15px;
+}
+
+.accordion label::after {
+    content: "+";
+    float: right;
+    font-weight: bold;
+}
+
+.accordion input:checked + label::after {
+    content: "-";
+}

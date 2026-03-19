@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+}
+
+/* GRID LAYOUT */
+.container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+}
+
+/* Header */
+.header {
+    grid-area: header;
+    background: #2c3e50;
+    color: white;
+    padding: 15px;
+
+    position: sticky;
+    top: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    grid-area: sidebar;
+    background: #34495e;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin: 15px 0;
+}
+
+/* Main (Flexbox inside Grid) */
+/* Cards container (already flex) */
+.main {
+    grid-area: main;
+    padding: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Card wrapper */
+.card {
+    width: calc(50% - 20px);
+    height: 200px;
+    perspective: 1000px; /* 🔥 enables 3D */
+}
+
+/* Inner flip container */
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+/* Flip on hover */
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front & back */
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    backface-visibility: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Front */
+.card-front {
+    background: #3498db;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Back */
+.card-back {
+    background: white;
+    color: #333;
+    padding: 20px;
+    transform: rotateY(180deg);
+}
+
+/* Footer */
+.footer {
+    grid-area: footer;
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
