@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+/* Hide radios */
+.tabs input {
+    display: none;
+}
+
+/* Tab labels */
+.tab-labels {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-labels label {
+    padding: 12px 25px;
+    margin: 0 5px;
+    background: #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.tab-labels label:hover {
+    background: #bbb;
+}
+
+/* Active tab highlight */
+#tab1:checked ~ .tab-labels label[for="tab1"],
+#tab2:checked ~ .tab-labels label[for="tab2"],
+#tab3:checked ~ .tab-labels label[for="tab3"] {
+    background: #3498db;
+    color: white;
+}
+
+/* Content box */
+.content {
+    display: none;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+/* Show active content */
+#tab1:checked ~ .content1,
+#tab2:checked ~ .content2,
+#tab3:checked ~ .content3 {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Content styling */
+.content h2 {
+    margin-bottom: 10px;
+}
+
+.content ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}

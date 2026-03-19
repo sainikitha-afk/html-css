@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5 - Multiple Modals</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>CSS Modal Demo</h1>
+
+    <div class="button-group">
+        <a href="#modal1" class="open-btn">Open Modal 1</a>
+        <a href="#modal2" class="open-btn">Open Modal 2</a>
+        <a href="#modal3" class="open-btn">Open Modal 3</a>
+    </div>
+
+    <!-- Modal 1 -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h2>Modal One</h2>
+            <p>This is the first modal using the :target pseudo-class.</p>
+            <a href="#" class="close-btn">Close</a>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <h2>Modal Two</h2>
+            <p>This is the second modal with the same reusable structure.</p>
+            <a href="#" class="close-btn">Close</a>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <h2>Modal Three</h2>
+            <p>This is the third modal demonstrating scalability.</p>
+            <a href="#" class="close-btn">Close</a>
+        </div>
+    </div>
+
+</body>
+</html>

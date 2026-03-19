@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    background: linear-gradient(90deg, #2c3e50, #4ca1af);
+    padding: 10px 0;
+}
+
+/* MAIN MENU */
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    position: relative;
+    margin: 0 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #002032;
+}
+
+/* SUBMENU (hidden by default) */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+
+    background: white;
+    min-width: 180px;
+    border-radius: 6px;
+    overflow: hidden;
+
+    /* Hidden state */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+
+    transition: all 0.3s ease;
+}
+
+/* SUBMENU ITEMS */
+.submenu li a {
+    color: #333;
+    padding: 10px;
+}
+
+.submenu li a:hover {
+    background-color: #f4f4f4;
+}
+
+/* 🔥 SHOW DROPDOWN ON HOVER */
+.dropdown:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Hide checkbox */
+.dropdown input {
+    display: none;
+}
+
+/* Style label like menu link */
+.dropdown label {
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Hide submenu initially */
+    .submenu {
+        position: static;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        transition: max-height 0.3s ease;
+    }
+
+    /* Expand when checked */
+    .dropdown input:checked + label + .submenu {
+        max-height: 200px;
+    }
+
+    /* Better spacing */
+    .submenu li {
+        background-color: #f9f9f9;
+    }
+}

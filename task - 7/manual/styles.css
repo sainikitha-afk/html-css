@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    background: #f4f4f4;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+/* Carousel */
+.carousel {
+    width: 300px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Hide radios */
+.carousel input {
+    display: none;
+}
+
+/* Slides container */
+.slides {
+    display: flex;
+    width: 300%;
+    transition: transform 0.8s ease-in-out;
+}
+
+/* Each slide */
+.slide {
+    width: 100%;
+    height: 200px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+
+    opacity: 0.6;
+    transition: opacity 0.4s;
+}
+
+/* Colors */
+.s1 { background: #3498db; }
+.s2 { background: #2ecc71; }
+.s3 { background: #e67e22; }
+
+/* Active slide highlight */
+#slide1:checked ~ .slides .s1,
+#slide2:checked ~ .slides .s2,
+#slide3:checked ~ .slides .s3 {
+    opacity: 1;
+}
+
+/* Movement */
+#slide1:checked ~ .slides {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+
+#slide3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+/* Navigation dots */
+.navigation {
+    margin-top: 10px;
+}
+
+.navigation label {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #ccc;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Active dot */
+#slide1:checked ~ .navigation label:nth-child(1),
+#slide2:checked ~ .navigation label:nth-child(2),
+#slide3:checked ~ .navigation label:nth-child(3) {
+    background: #333;
+}
